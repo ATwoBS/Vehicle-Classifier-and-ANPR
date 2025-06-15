@@ -1,4 +1,14 @@
-﻿# Vehicle-Classifier-and-ANPR
+﻿---
+title: VehicleClassifierAndANPR
+emoji: 🚗
+colorFrom: gray
+colorTo: indigo
+sdk: docker
+pinned: true
+short_description: "Classify and read number plates of vehicles using YOLO"
+---
+
+# Vehicle-Classifier-and-ANPR
 ## How to run: 
 1. Clone the repository.
 2. Create a python environment and activate with using following command

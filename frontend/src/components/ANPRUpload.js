@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "../styles/styles.css";
 
-const API_URL=process.env.REACT_APP_API_URL;
+const API_URL=process.env.REACT_APP_API_URL || '';
 
 const ANPRUpload = () => {
     const [selectedFile, setSelectedFile] = useState(null);

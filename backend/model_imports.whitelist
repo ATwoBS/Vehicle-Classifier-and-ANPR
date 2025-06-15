@@ -1,0 +1,76 @@
+# PyTorch Model Import Whitelist
+# Lines starting with # are comments
+# Use regex patterns to match imports
+
+# Core PyTorch
+torch.*
+torchvision.*
+torch_geometric.*
+
+# Numerical computing
+numpy.*
+scipy.*
+
+# Standard library (safe modules)
+collections.*
+functools.*
+operator.*
+itertools.*
+math
+random
+copy.*
+typing.*
+dataclasses.*
+
+# ML/AI Libraries
+sklearn.*
+transformers.*
+diffusers.*
+accelerate.*
+
+# YOLO/Ultralytics specific
+ultralytics.*
+models.*
+utils.*
+
+# Computer vision
+cv2.*
+PIL.*
+pillow.*
+
+# Data handling
+pandas.*
+h5py.*
+
+# Packaging/serialization
+packaging.*
+importlib.*
+
+# Safe builtins
+builtins.len
+builtins.range
+builtins.list
+builtins.dict
+builtins.tuple
+builtins.set
+builtins.int
+builtins.float
+builtins.str
+builtins.bool
+
+# Common safe patterns
+_codecs.*
+encodings.*
+
+_utils
+activation
+batchnorm
+com
+comq
+container
+conv
+cv2
+nn
+pooling
+torch
+upsampling

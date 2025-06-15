@@ -1,7 +1,6 @@
 from ultralytics import YOLO
 import torch
 import cv2
-import numpy as np
 import os
 import easyocr
 
