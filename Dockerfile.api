@@ -1,0 +1,21 @@
+# Dockerfile.api
+FROM python:3.9-slim
+
+WORKDIR /app
+
+# Install system dependencies for OpenCV
+RUN apt-get update && apt-get install -y libgl1 libglib2.0-0 libsm6 libxext6 && apt-get clean
+
+COPY ./backend/requirements.txt .
+
+# Use the CPU-only version of PyTorch
+RUN pip install --no-cache-dir --extra-index-url https://download.pytorch.org/whl/cpu -r requirements.txt
+
+# --- ADD THIS LINE ---
+# Pre-download the EasyOCR models so they are baked into the image
+RUN python -c "import easyocr; reader = easyocr.Reader(['en'])"
+
+COPY ./backend /app
+
+# Run the app with Gunicorn
+CMD ["gunicorn", "--workers", "2", "--bind", "0.0.0.0:8000", "app:app"]

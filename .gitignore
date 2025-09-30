@@ -1,0 +1,6 @@
+# .gitignore
+
+# Ignore temporary user uploads and generated results
+backend/static/uploads/
+backend/static/results/
+backend/static/plates/

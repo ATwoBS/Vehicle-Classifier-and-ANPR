@@ -1,0 +1,10 @@
+Flask
+Flask-CORS
+gunicorn
+ultralytics
+torch
+torchvision
+opencv-python
+easyocr
+numpy
+Pillow

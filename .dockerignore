@@ -1,0 +1,14 @@
+# .dockerignore
+
+# Ignore Python virtual environment and cache
+**/__pycache__
+*.pyc
+prototype_env/
+venv/
+
+# Ignore frontend dependencies and build output
+frontend/node_modules
+frontend/build
+
+# Ignore Docker build cache
+.docker-cache
